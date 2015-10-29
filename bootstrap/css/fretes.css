@@ -1,0 +1,675 @@
+@CHARSET "ISO-8859-1";
+table a:link {
+	color: #666;
+	font-weight: bold;
+	text-decoration:none;
+}
+table a:visited {
+	color: #999999;
+	font-weight:bold;
+	text-decoration:none;
+}
+table a:active,
+table a:hover {
+	color: #bd5a35;
+	text-decoration:underline;
+}
+table {
+	font-family:Arial, Helvetica, sans-serif;
+	color:#666;
+	font-size:12px;
+	text-shadow: 1px 1px 0px #fff;
+	background:#eaebec;
+	margin:20px;
+	border:#ccc 1px solid;
+
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+
+	-moz-box-shadow: 0 1px 2px #d1d1d1;
+	-webkit-box-shadow: 0 1px 2px #d1d1d1;
+	box-shadow: 0 1px 2px #d1d1d1;
+}
+table th {
+	padding:20px 18px 18px 18px;
+	border-top:2px solid #34495E;
+	border-bottom:1px solid #e0e0e0;
+
+	background: #ededed;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+	background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
+}
+table th:first-child {
+	text-align: left;
+	padding-left:20px;
+}
+table tr:first-child th:first-child {
+	-moz-border-radius-topleft:3px;
+	-webkit-border-top-left-radius:3px;
+	border-top-left-radius:3px;
+}
+table tr:first-child th:last-child {
+	-moz-border-radius-topright:3px;
+	-webkit-border-top-right-radius:3px;
+	border-top-right-radius:3px;
+}
+table tr {
+	text-align: center;
+	padding-left:20px;
+}
+table td:first-child {
+	text-align: center;
+	padding-left:20px;
+	border-left: 0;
+}
+table td {
+	padding:18px;
+	border-top: 1px solid #ffffff;
+	border-bottom:1px solid #e0e0e0;
+	border-left: 1px solid #e0e0e0;
+
+	background: #fafafa;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+	background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
+}
+table tr.even td {
+	background: #f6f6f6;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
+	background: -moz-linear-gradient(top,  #f8f8f8,  #f6f6f6);
+}
+table tr:last-child td {
+	border-bottom:0;
+}
+table tr:last-child td:first-child {
+	-moz-border-radius-bottomleft:3px;
+	-webkit-border-bottom-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+table tr:last-child td:last-child {
+	-moz-border-radius-bottomright:3px;
+	-webkit-border-bottom-right-radius:3px;
+	border-bottom-right-radius:3px;
+}
+table tr:hover td {
+	background: #f2f2f2;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+	background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);	
+}
+
+
+/* Início da Folha de Estilos */
+ 
+/* Estilo generalizado HTML e BODY */
+html, body
+{
+    height: 100%;
+}
+ 
+body { 
+    margin: 0;
+    padding: 0;
+    /*font-family: "HelveticaNeueLT Std UltLt Cn", sans-serif;*/
+    font-family: "Century Gotic", sans-serif;
+    font-size: 11pt;
+}
+ 
+/* Estilo para Menu */
+ 
+ 
+#cabecalho
+{
+    margin: 0;
+    padding: 0;
+    background: rgba(0,0,0,0.6);
+    letter-spacing: 0.10em;     
+    text-decoration: none;
+    font-size: 0.90em;
+    font-weight: 200;
+    text-align: center;
+     color: #ffffff;
+ 
+}
+     
+
+#menu li a:hover {
+ 
+    color:#a0ff05;
+     
+}
+ 
+ 
+/* Estilos na TAG Fieldset e suas variações em classe ou id */
+ 
+fieldset {
+ 
+    width: 750px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    border-bottom: 5px;
+    border-left: none;
+    border-right: none;
+         
+}
+ 
+#prod_fieldset {
+ 
+    width: 700px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: none;
+         
+}
+ 
+#prod_fieldset2 {
+ 
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: none;
+         
+}
+ 
+legend {
+ 
+    text-align: center;
+ 
+}
+ 
+/* Estilos de Alinhamento e/ou Organização (Padronização) */
+/* Contem Classes e ID's*/
+ 
+ 
+.c_div {
+ 
+    margin: 0 auto;
+    padding: 0.5em 0em 0.5em 0em;
+    font-size: 4em;
+    text-transform: uppercase;
+    color: #a0a0a0;
+    text-align: center;
+     
+}
+ 
+.m_div {
+ 
+    margin: 0 auto;
+    font-size: 1.5em;
+    color: #a0a0a0;
+    text-align: center;
+     
+}
+ 
+.mm_div {
+ 
+    margin: 0 auto;
+    font-size: 1em;
+    color: #a0a0a0;
+    letter-spacing: 0.10em;
+    text-align: center;
+     
+}
+ 
+.clear_div {
+ 
+    text-align: center;
+}
+ 
+#regulamento {
+  
+    margin: 0 auto;
+    text-align: justify;
+    max-width: 750px;
+    font-size: 12px;
+}
+ 
+#alinhamento {
+ 
+    text-align: center;
+ 
+}
+ 
+ 
+label {
+    font-weight: bold;
+}
+ 
+.c_paragrafo {
+    text-align: center;
+    padding: 1.2em;
+}
+ 
+ 
+/* Estilo nas TAGS H1, H2 e H3 */
+ 
+h1
+{
+    margin: 0px auto;
+    padding: 0;
+    font-weight: 600;
+    color: #000000;
+}
+ 
+h2
+{
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    color: #000000;
+}
+ 
+h3
+{
+    margin: 0;
+    padding: 0;
+    font-weight: 200;
+    color: #000000;
+}
+ 
+ 
+ 
+/* Estilo para Link's genéricos */
+ 
+a
+{
+    margin: 0;
+    padding: 0;
+    color: #2C383B;
+}
+ 
+/*a:hover
+{
+    margin: 0;
+    padding: 0;
+    color:#c1c1c1;
+     
+}*/
+ 
+.link_azul{
+    margin:0;
+    padding: 0;
+    font-size: 16px;
+    color:#00a4e0;
+    text-align: center;
+    text-decoration: none;
+}
+ 
+.link_azul a{
+    margin:0;
+    padding: 0;
+    font-size: 16px;
+    color:#00a4e0;
+    text-align: center;
+    text-decoration: none;
+}
+ 
+.link_azul a:hover{
+    margin:0;
+    padding: 0;
+    font-size: 16px;
+    color:#00dbb9;
+    text-align: center;
+    text-decoration: none;
+}
+ 
+ 
+ 
+/* Estilo para TAG para ações com o Relógio */
+ 
+#fundo_relogio {
+    background-image: url('../imagens/sizes_01_large.jpg');
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    padding: 0 0 0 0;
+    vertical-align:top;
+    width: 275px;
+    height: 306px;
+    text-align: center;
+    color:#ffffff;
+    font-weight: 200;
+    font-size: 3em;
+}
+ 
+.alinha_blocks
+{
+    margin: 0;
+    padding: 2em 0em 0em 0em;
+    text-align: center;
+}
+ 
+.alinha_blocks2
+{
+    margin: 0;
+    padding: 5em 0em 0em 0em;
+    text-align: center;
+}
+ 
+#fundo_relogio2 {
+    background-image: url('../imagens/toquen.png');
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0 1em 0 0;
+    display: inline-block;
+    vertical-align:top;
+    width: 275px;
+    height: 306px;
+    text-align: center;
+    color:#ffffff;
+    font-weight: 200;
+    font-size: 3em;
+}
+ 
+#fundo_relogio3 {
+    background-image: url('../imagens/toquel.png');
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0 0 1em 0;
+    display: inline-block;
+    vertical-align:top;
+    width: 275px;
+    height: 306px;
+    text-align: center;
+    color:#ffffff;
+    font-weight: 200;
+    font-size: 3em;
+}
+ 
+#fundo_relogio4 {
+    background-image: url('../imagens/chamando.png');
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0 1em 0 0;
+    display: inline-block;
+    vertical-align:top;
+    width: 275px;
+    height: 306px;
+    text-align: center;
+    color:#ffffff;
+    font-weight: 200;
+    font-size: 3em;
+}
+ 
+#fundo_relogio5 {
+    background-image: url('../imagens/chamado.png');
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0 0 1em 0;
+    display: inline-block;
+    vertical-align:top;
+    width: 275px;
+    height: 306px;
+    text-align: center;
+    color:#ffffff;
+    font-weight: 200;
+    font-size: 3em;
+}
+ 
+#bg_watch {
+    padding: 0 0 0 0;
+    vertical-align:top;
+    width: 275px;
+    height: 306px;
+    color:#ffffff;
+    font-weight: 200;
+    font-size: 1em;
+}
+ 
+#bg_watch2 {
+    padding: 0 0 0 0;
+    vertical-align:top;
+    width: 275px;
+    height: 306px;
+    color:#ffffff;
+    font-weight: 200;
+    font-size: 1em;
+}
+ 
+#relogio_base {
+    margin: 0 auto;
+    padding: 0 0 0 0;
+    vertical-align:bottom;
+    width: 275px;
+    color:#ffffff;
+    font-weight: 200;
+    font-size: 3em;
+}
+ 
+.div_click {
+    text-align: center;
+    display:inline-block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+ 
+ 
+/* Estilo para TAG ASIDE e suas variações específicas */
+ 
+aside {
+     
+    width: 1100px;
+    height: auto;
+    margin: 0 auto;
+    padding: 1em;
+    text-align: center;
+ 
+     
+}
+ 
+aside div#w {
+ 
+    margin: 0 auto;
+    float: left;
+    width: 347px;
+    height: 383px;
+     
+}
+ 
+aside div#ws {
+ 
+    margin: 0 auto;
+    float: left;
+    width: 347px;
+    height: 383px;
+     
+}
+ 
+aside div#w2 {
+ 
+    margin: 0 auto;
+    float: left;
+    width: 347px;
+    height: 383px;
+     
+}
+ 
+aside div#ws2 {
+ 
+    margin: 0 auto;
+    float: right;
+    width: 347px;
+    height: 383px;
+     
+}
+ 
+aside div#we {
+    
+    margin: 0 auto;
+    float: left;
+    width: 347px;
+    height: 383px;
+ 
+     
+}
+ 
+aside div#bo {
+    clear: both;
+     
+}
+ 
+ 
+/* Estilo para organização de conteúdo (Banners, Vídeos, Conteúdo Genérico, etc) */
+/* Contém estilo em TAGS, classes e ID's */
+ 
+#topo_conteudo {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+     
+}
+ 
+#ali {
+    margin: 0;
+    padding: 0em 2em 0em 0em;
+    display: inline-block;
+    text-align: center;
+}
+ 
+ 
+#ali_2 {
+    margin: 0;
+    padding: 0em 0em 0em 2em;
+    display: inline-block;
+    text-align: center;
+}
+ 
+ 
+.banner {
+     
+     
+    margin: 0 auto;
+    text-align: center;
+   
+}
+ 
+#video {
+ 
+    margin: 0 auto;
+    text-align: center;
+ 
+}
+     
+table {
+     
+    margin: 0 auto;
+    position:relative;
+     
+}
+ 
+ 
+/* Estilo para Tabela */
+/* Contem apenas aplicação nas TAGS, sem classe ou ID */
+ 
+td {
+ 
+    padding: 0.6em 0.6em 0.6em 0.6em;
+ 
+}
+ 
+th {
+
+    background-color: #f5f5f5;
+ 
+}
+ 
+caption {
+  
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0.6em 0.6em 0.6em 0em;
+     
+}
+ 
+ 
+/* Estilo para alinhamento de DIV no modo Float */
+ 
+ 
+#form_left{
+     
+    float: left;
+    width: 48%;
+    text-align:left;
+    margin-right: 2%;
+ 
+}
+ 
+#form_ri{
+ 
+    float: right;
+    width: 48%;
+    text-align:left;
+    margin-left: 2%;
+     
+ 
+}
+ 
+.al_input {
+    float: right;
+    max-width: 350px:
+     
+}
+ 
+ 
+/* Estilo para o Rodapé (Copyright) */
+ 
+#copyright
+{
+ 
+    bottom:-100px;
+    width:100%;
+    position: relative;
+     
+}
+ 
+#copyright p
+{
+    padding: 1em 0em 1em 0em;
+    letter-spacing: 0.20em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 9px;
+    font-weight: 5s00;
+    color: background: rgba(0,0,0,0);
+}
+ 
+#carrousel{
+    width:100%;
+    position: relative;
+}
+ 
+#menu #pagAtual {
+    color:#a0ff05;
+}
+ 
+
+html,
+body,
+ {
+  height: 100%;
+}
+ 
+#link_verde{
+    margin:0;
+    padding: 3em;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+     
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+/* Fim da Folha de Estilo */
