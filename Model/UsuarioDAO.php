@@ -1,6 +1,6 @@
 <?php
 
-require_once '../Conexao/Conexao.php';
+require_once '/../Conexao/Conexao.php';
 
 class UsuarioDAO {
 
@@ -12,7 +12,7 @@ class UsuarioDAO {
 	
 		try {
 			$query = "SELECT *
-				FROM TB_GE_USUARIO
+				FROM tb_ge_usuario
  				WHERE ds_email = ? AND ds_senha = ?";
 			$conn = Conexao::getConn();
 			$p_query =  $conn->prepare ( $query );

@@ -62,7 +62,7 @@ class FretesDAO {
 	
 	public static function listarFretes(){
 		try {
-			$query = "SELECT * FROM grejaninexpress.v_fretes;";
+			$query = "SELECT * FROM mgrejanin1.v_fretes;";
 			
 			$p_query = Conexao::getConn() ->prepare ( $query );
 			$p_query->execute ();

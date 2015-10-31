@@ -10,7 +10,7 @@ class OrigemDAO {
 	
 	public static function inserirOrigem($dadosOrigem) {
 		try {
-			$query = "INSERT INTO `TB_GE_ORIGEM`(`nm_origem`, `ds_sigla`, `ds_obs`) 
+			$query = "INSERT INTO `tb_ge_origem`(`nm_origem`, `ds_sigla`, `ds_obs`) 
 			VALUES (?, ?, ?)";
 						
 			$p_query = Conexao::getConn ()->prepare ( $query );
@@ -42,16 +42,16 @@ class OrigemDAO {
 // 		}
 // 	}
 	
-	public static function deletarFuncionario($cod_funcionario) {
-		try {
-			$query = "DELETE FROM TB_GE_FUNCIONARIO WHERE cod_funcionario = ?";	
-			$p_query = Conexao::getConn() ->prepare ( $query );
-			$p_query->bindValue ( 1,$cod_funcionario , PDO::PARAM_STR);
-			return $p_query->execute ();
-		} catch ( Exception $e ) {
-			print "Ocorreu um erro ao tentar executar esta açao, foi gerado um LOG do mesmo, tente novamente mais tarde." . $e->getMessage();
-		}
-	}
+// 	public static function deletarFuncionario($cod_funcionario) {
+// 		try {
+// 			$query = "DELETE FROM TB_GE_FUNCIONARIO WHERE cod_funcionario = ?";	
+// 			$p_query = Conexao::getConn() ->prepare ( $query );
+// 			$p_query->bindValue ( 1,$cod_funcionario , PDO::PARAM_STR);
+// 			return $p_query->execute ();
+// 		} catch ( Exception $e ) {
+// 			print "Ocorreu um erro ao tentar executar esta açao, foi gerado um LOG do mesmo, tente novamente mais tarde." . $e->getMessage();
+// 		}
+// 	}
 	
 	
 	public static function buscarOrigens(){

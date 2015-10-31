@@ -10,7 +10,7 @@ class DestinoDAO {
 	
 	public static function inserirDestino($dadosDestino) {
 		try {
-			$query = "INSERT INTO `TB_GE_Destino`(`nm_destino`, `ds_sigla`, `ds_obs`) 
+			$query = "INSERT INTO `tb_ge_destino`(`nm_destino`, `ds_sigla`, `ds_obs`) 
 			VALUES (?, ?, ?)";
 						
 			$p_query = Conexao::getConn ()->prepare ( $query );
@@ -42,21 +42,21 @@ class DestinoDAO {
 // 		}
 // 	}
 	
-	public static function deletarDestino($cod_funcionario) {
-		try {
-			$query = "DELETE FROM TB_GE_FUNCIONARIO WHERE cod_funcionario = ?";	
-			$p_query = Conexao::getConn() ->prepare ( $query );
-			$p_query->bindValue ( 1,$cod_funcionario , PDO::PARAM_STR);
-			return $p_query->execute ();
-		} catch ( Exception $e ) {
-			print "Ocorreu um erro ao tentar executar esta açao, foi gerado um LOG do mesmo, tente novamente mais tarde." . $e->getMessage();
-		}
-	}
+// 	public static function deletarDestino($cod_funcionario) {
+// 		try {
+// 			$query = "DELETE FROM TB_GE_FUNCIONARIO WHERE cod_funcionario = ?";	
+// 			$p_query = Conexao::getConn() ->prepare ( $query );
+// 			$p_query->bindValue ( 1,$cod_funcionario , PDO::PARAM_STR);
+// 			return $p_query->execute ();
+// 		} catch ( Exception $e ) {
+// 			print "Ocorreu um erro ao tentar executar esta açao, foi gerado um LOG do mesmo, tente novamente mais tarde." . $e->getMessage();
+// 		}
+// 	}
 	
 	
 	public static function buscarDestinos(){
 		try {
-			$query = "SELECT * FROM TB_GE_DESTINO ORDER BY nm_destino DESC";
+			$query = "SELECT * FROM tb_ge_destino ORDER BY nm_destino DESC";
 			$p_query = Conexao::getConn() ->prepare ( $query );
 			$p_query->execute ();
 			while ($res = $p_query->fetch ( PDO::FETCH_ASSOC )) { 

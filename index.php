@@ -32,7 +32,7 @@ if (isset ( $_GET ['action'] )) {
 <!-- Start Formoid form-->
 <script type="text/javascript" src="login_files/formoid1/jquery.min.js"></script>
 <form class="formoid-solid-dark" style="margin-top: 10%;background-color:#FFFFFF;font-size:14px;font-family:'Roboto',Arial,Helvetica,sans-serif;color:#34495E;max-width:480px;min-width:150px;" 
-method="post" action="Controller/Usuario/login.php">
+method="post" action="BO/Usuario/login.php">
 	<div class="title">
 		<h2>Login</h2>
 	</div>
@@ -43,7 +43,7 @@ method="post" action="Controller/Usuario/login.php">
 			<span class="required">*</span>
 		</label>
 		<div class="item-cont">
-			<input class="large" type="text" name="ds_email" required="required" placeholder="email"/>
+			<input class="large" type="email" name="ds_email" required="required" placeholder="email"/>
 			<span class="icon-place"></span>
 		</div>
 	</div>

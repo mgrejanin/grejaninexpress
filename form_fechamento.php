@@ -25,7 +25,7 @@
 <!-- Start Formoid form-->
 	<form class="formoid-solid-dark"
 		style="background-color: #ffffff; font-size: 14px; font-family: 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
-		method="post" action="Controller/Frete/fechamento.php">
+		method="post" action="BO/Frete/fechamento.php">
 		<div class="title">
 			<h2>Fechamento</h2>
 		</div>

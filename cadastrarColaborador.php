@@ -24,7 +24,7 @@
 		src="cadastrarfuncionario_files/formoid1/jquery.min.js"></script>
 	<form class="formoid-solid-dark"
 		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
-		action="Controller/Colaborador/insert.php" method="post">
+		action="BO/Colaborador/insert.php" method="post">
 		<div class="title">
 			<h2>Cadastro de Colaborador</h2>
 		</div>

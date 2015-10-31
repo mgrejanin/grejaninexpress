@@ -3,12 +3,14 @@
 
 class Conexao{
 
-	private static $dsn = "mysql:host=mysql02.mgrejanin1.hospedagemdesites.ws;port=3306;dbname=mgrejanin1;";
 // 	private static $dsn = "mysql:host=localhost;dbname=grejaninexpress;";
-	private static $user = "mgrejanin1";
-	private static $pass = "Oliveira123";
 // 	private static $user = "root";
 // 	private static $pass = "";
+	
+	private static $dsn = "mysql:host=mysql02.mgrejanin1.hospedagemdesites.ws;port=3306;dbname=mgrejanin1;";
+	private static $user = "mgrejanin1";
+	private static $pass = "Oliveira123";
+	
 	
 	function __construct(){
 		//
