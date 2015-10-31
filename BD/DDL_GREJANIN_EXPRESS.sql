@@ -1,8 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `grejaninexpress` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `grejaninexpress`;
+CREATE DATABASE  IF NOT EXISTS `mgrejanin1` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `mgrejanin1`;
 -- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: grejaninexpress
+-- Host: 127.0.0.1    Database: mgrejanin1
 -- ------------------------------------------------------
 -- Server version	5.6.17
 
@@ -175,11 +175,11 @@ LOCK TABLES `tb_ge_usuario` WRITE;
 UNLOCK TABLES;
 
 --
--- Dumping events for database 'grejaninexpress'
+-- Dumping events for database 'mgrejanin1'
 --
 
 --
--- Dumping routines for database 'grejaninexpress'
+-- Dumping routines for database 'mgrejanin1'
 --
 
 --
