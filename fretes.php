@@ -144,7 +144,7 @@ $reg = FretesDAO::listarFretes();
 					<td><?php echo "R$". number_format($dados['vlr_pago'], 2, ',', '.');?></td>
 					<td><?php echo isset($dados['ds_obs']) ? $dados['ds_obs'] :  ""?></td>
 					<td><a href="#"><img alt="alterar" src="images/edit.png"></a></td>
-					<td><a href="Controller/Frete/delete.php?cod_frete=<?php echo $dados['cod_frete']?>" onclick="return confirm('Deseja exluir o frete dos registros?')"><img alt="excluir" src="images/trash.png"></a></td>
+					<td><a href="BO/Frete/delete.php?cod_frete=<?php echo $dados['cod_frete']?>" onclick="return confirm('Deseja exluir o frete dos registros?')"><img alt="excluir" src="images/trash.png"></a></td>
 				</tr>
 				<?php endforeach;}?>
 			</tbody>

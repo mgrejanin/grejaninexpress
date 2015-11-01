@@ -12,7 +12,7 @@ class UsuarioDAO {
 	
 		try {
 			$query = "SELECT *
-				FROM tb_ge_usuario
+				FROM TB_GE_USUARIO
  				WHERE ds_email = ? AND ds_senha = ?";
 			$conn = Conexao::getConn();
 			$p_query =  $conn->prepare ( $query );

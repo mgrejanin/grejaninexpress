@@ -25,26 +25,23 @@ DROP TABLE IF EXISTS `v_fretes`;
 /*!50001 DROP VIEW IF EXISTS `v_fretes`*/;
 SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8;
-/*!50001 CREATE VIEW `v_fretes` AS SELECT 
- 1 AS `cod_frete`,
- 1 AS `ds_data`,
- 1 AS `nr_wb`,
- 1 AS `vlr_recebido`,
- 1 AS `vlr_pago`,
- 1 AS `ds_obs`,
- 1 AS `nm_origem`,
- 1 AS `nm_destino`,
- 1 AS `nm_colaborador`*/;
-SET character_set_client = @saved_cs_client;
-
+/ROP TABLE IF EXISTS `v_fretes`;
+/*!50001 DROP VIEW IF EXISTS `v_fretes`*/;
+CREATE VIEW v_fretes AS SELECT 
+F.cod_frete, F.ds_data,F.nr_wb,F.vlr_recebido,F.vlr_pago,F.ds_obs,O.nm_origem,D.nm_destino,C.nm_colaborador
+FROM TB_GE_FRETE AS F
+INNER JOIN TB_GE_ORIGEM O ON (F.cod_origem = O.cod_origem)
+INNER JOIN TB_GE_DESTINO D ON (F.cod_destino = D.cod_destino)
+INNER JOIN TB_GE_COLABORADOR C ON (F.cod_colaborador = C.cod_colaborador);
+SET character_set_client = UTF-8;
 --
--- Table structure for table `tb_ge_colaborador`
+-- Table structure for table `TB_GE_COLABORADOR`
 --
 
-DROP TABLE IF EXISTS `tb_ge_colaborador`;
+DROP TABLE IF EXISTS `TB_GE_COLABORADOR`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tb_ge_colaborador` (
+CREATE TABLE `TB_GE_COLABORADOR` (
   `cod_colaborador` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `nm_colaborador` varchar(120) NOT NULL,
   `ds_email` varchar(120) NOT NULL,
@@ -55,22 +52,22 @@ CREATE TABLE `tb_ge_colaborador` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tb_ge_colaborador`
+-- Dumping data for table `TB_GE_COLABORADOR`
 --
 
-LOCK TABLES `tb_ge_colaborador` WRITE;
-/*!40000 ALTER TABLE `tb_ge_colaborador` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tb_ge_colaborador` ENABLE KEYS */;
+LOCK TABLES `TB_GE_COLABORADOR` WRITE;
+/*!40000 ALTER TABLE `TB_GE_COLABORADOR` DISABLE KEYS */;
+/*!40000 ALTER TABLE `TB_GE_COLABORADOR` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `tb_ge_destino`
+-- Table structure for table `TB_GE_DESTINO`
 --
 
-DROP TABLE IF EXISTS `tb_ge_destino`;
+DROP TABLE IF EXISTS `TB_GE_DESTINO`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tb_ge_destino` (
+CREATE TABLE `TB_GE_DESTINO` (
   `cod_destino` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `nm_destino` varchar(120) NOT NULL,
   `ds_sigla` varchar(15) NOT NULL,
@@ -80,22 +77,22 @@ CREATE TABLE `tb_ge_destino` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tb_ge_destino`
+-- Dumping data for table `TB_GE_DESTINO`
 --
 
-LOCK TABLES `tb_ge_destino` WRITE;
-/*!40000 ALTER TABLE `tb_ge_destino` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tb_ge_destino` ENABLE KEYS */;
+LOCK TABLES `TB_GE_DESTINO` WRITE;
+/*!40000 ALTER TABLE `TB_GE_DESTINO` DISABLE KEYS */;
+/*!40000 ALTER TABLE `TB_GE_DESTINO` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `tb_ge_frete`
+-- Table structure for table `TB_GE_FRETE`
 --
 
-DROP TABLE IF EXISTS `tb_ge_frete`;
+DROP TABLE IF EXISTS `TB_GE_FRETE`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tb_ge_frete` (
+CREATE TABLE `TB_GE_FRETE` (
   `cod_frete` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `ds_data` date NOT NULL,
   `nr_wb` varchar(200) NOT NULL,
@@ -109,29 +106,29 @@ CREATE TABLE `tb_ge_frete` (
   KEY `FK_TB_GE_FRETE_ORIGEM` (`cod_origem`),
   KEY `FK_TB_GE_FRETE_DESTINO` (`cod_destino`),
   KEY `FK_TB_GE_FRETE_COLABORADOR` (`cod_colaborador`),
-  CONSTRAINT `FK_TB_GE_FRETE_ORIGEM` FOREIGN KEY (`cod_origem`) REFERENCES `tb_ge_origem` (`cod_origem`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `FK_TB_GE_FRETE_DESTINO` FOREIGN KEY (`cod_destino`) REFERENCES `tb_ge_destino` (`cod_destino`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `FK_TB_GE_FRETE_COLABORADOR` FOREIGN KEY (`cod_colaborador`) REFERENCES `tb_ge_colaborador` (`cod_colaborador`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `FK_TB_GE_FRETE_ORIGEM` FOREIGN KEY (`cod_origem`) REFERENCES `TB_GE_ORIGEM` (`cod_origem`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `FK_TB_GE_FRETE_DESTINO` FOREIGN KEY (`cod_destino`) REFERENCES `TB_GE_DESTINO` (`cod_destino`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `FK_TB_GE_FRETE_COLABORADOR` FOREIGN KEY (`cod_colaborador`) REFERENCES `TB_GE_COLABORADOR` (`cod_colaborador`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tb_ge_frete`
+-- Dumping data for table `TB_GE_FRETE`
 --
 
-LOCK TABLES `tb_ge_frete` WRITE;
-/*!40000 ALTER TABLE `tb_ge_frete` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tb_ge_frete` ENABLE KEYS */;
+LOCK TABLES `TB_GE_FRETE` WRITE;
+/*!40000 ALTER TABLE `TB_GE_FRETE` DISABLE KEYS */;
+/*!40000 ALTER TABLE `TB_GE_FRETE` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `tb_ge_origem`
+-- Table structure for table `TB_GE_ORIGEM`
 --
 
-DROP TABLE IF EXISTS `tb_ge_origem`;
+DROP TABLE IF EXISTS `TB_GE_ORIGEM`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tb_ge_origem` (
+CREATE TABLE `TB_GE_ORIGEM` (
   `cod_origem` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `nm_origem` varchar(120) NOT NULL,
   `ds_sigla` varchar(15) NOT NULL,
@@ -141,22 +138,22 @@ CREATE TABLE `tb_ge_origem` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tb_ge_origem`
+-- Dumping data for table `TB_GE_ORIGEM`
 --
 
-LOCK TABLES `tb_ge_origem` WRITE;
-/*!40000 ALTER TABLE `tb_ge_origem` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tb_ge_origem` ENABLE KEYS */;
+LOCK TABLES `TB_GE_ORIGEM` WRITE;
+/*!40000 ALTER TABLE `TB_GE_ORIGEM` DISABLE KEYS */;
+/*!40000 ALTER TABLE `TB_GE_ORIGEM` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `tb_ge_usuario`
+-- Table structure for table `TB_GE_USUARIO`
 --
 
-DROP TABLE IF EXISTS `tb_ge_usuario`;
+DROP TABLE IF EXISTS `TB_GE_USUARIO`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tb_ge_usuario` (
+CREATE TABLE `TB_GE_USUARIO` (
   `cod_usuario` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `nm_usuario` varchar(120) NOT NULL,
   `ds_email` varchar(120) NOT NULL,
@@ -166,12 +163,12 @@ CREATE TABLE `tb_ge_usuario` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tb_ge_usuario`
+-- Dumping data for table `TB_GE_USUARIO`
 --
 
-LOCK TABLES `tb_ge_usuario` WRITE;
-/*!40000 ALTER TABLE `tb_ge_usuario` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tb_ge_usuario` ENABLE KEYS */;
+LOCK TABLES `TB_GE_USUARIO` WRITE;
+/*!40000 ALTER TABLE `TB_GE_USUARIO` DISABLE KEYS */;
+/*!40000 ALTER TABLE `TB_GE_USUARIO` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -195,7 +192,7 @@ UNLOCK TABLES;
 /*!50001 SET collation_connection      = utf8_general_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `v_fretes` AS select `f`.`cod_frete` AS `cod_frete`,`f`.`ds_data` AS `ds_data`,`f`.`nr_wb` AS `nr_wb`,`f`.`vlr_recebido` AS `vlr_recebido`,`f`.`vlr_pago` AS `vlr_pago`,`f`.`ds_obs` AS `ds_obs`,`o`.`nm_origem` AS `nm_origem`,`d`.`nm_destino` AS `nm_destino`,`c`.`nm_colaborador` AS `nm_colaborador` from (((`tb_ge_frete` `f` join `tb_ge_origem` `o` on((`f`.`cod_origem` = `o`.`cod_origem`))) join `tb_ge_destino` `d` on((`f`.`cod_destino` = `d`.`cod_destino`))) join `tb_ge_colaborador` `c` on((`f`.`cod_colaborador` = `c`.`cod_colaborador`))) */;
+/*!50001 VIEW `v_fretes` AS select `f`.`cod_frete` AS `cod_frete`,`f`.`ds_data` AS `ds_data`,`f`.`nr_wb` AS `nr_wb`,`f`.`vlr_recebido` AS `vlr_recebido`,`f`.`vlr_pago` AS `vlr_pago`,`f`.`ds_obs` AS `ds_obs`,`o`.`nm_origem` AS `nm_origem`,`d`.`nm_destino` AS `nm_destino`,`c`.`nm_colaborador` AS `nm_colaborador` from (((`TB_GE_FRETE` `f` join `TB_GE_ORIGEM` `o` on((`f`.`cod_origem` = `o`.`cod_origem`))) join `TB_GE_DESTINO` `d` on((`f`.`cod_destino` = `d`.`cod_destino`))) join `TB_GE_COLABORADOR` `c` on((`f`.`cod_colaborador` = `c`.`cod_colaborador`))) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;

@@ -10,7 +10,7 @@ class OrigemDAO {
 	
 	public static function inserirOrigem($dadosOrigem) {
 		try {
-			$query = "INSERT INTO `tb_ge_origem`(`nm_origem`, `ds_sigla`, `ds_obs`) 
+			$query = "INSERT INTO `TB_GE_ORIGEM`(`nm_origem`, `ds_sigla`, `ds_obs`) 
 			VALUES (?, ?, ?)";
 						
 			$p_query = Conexao::getConn ()->prepare ( $query );
