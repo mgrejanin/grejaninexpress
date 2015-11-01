@@ -82,9 +82,5 @@ $res = FretesDAO::listarFretes ();
 	<?php include_once 'rodape.php';?>
 	<!-- /Footer -->
 
-
-	
-
-
 </body>
 </html>

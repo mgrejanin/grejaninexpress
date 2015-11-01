@@ -66,10 +66,6 @@
 		<!-- Botão Enviar -->
 		
 	</form>
-	
-	<script type="text/javascript"
-		src="cadastrarfuncionario_files/formoid1/formoid-solid-dark.js"></script>
-	<!-- Stop Formoid form-->
 
 </body>
 </html>
