@@ -1,6 +1,6 @@
 <?php
 
-require_once '../../Conexao/Conexao.php';
+require_once __DIR__ . '/../Conexao/Conexao.php';
 
 class FretesDAO {
 	
@@ -81,7 +81,7 @@ class FretesDAO {
 	
 	public static function buscarFretes($dt_inicial, $dt_final) {
 		try {
-			$query = "SELECT * FROM grejaninexpress.v_fretes WHERE ds_data >= ? AND ds_data <= ?";
+			$query = "SELECT * FROM mgrejanin1.v_fretes WHERE ds_data >= ? AND ds_data <= ?";
 			$p_query = Conexao::getConn() ->prepare ( $query );
 			$p_query->bindValue ( 1, date("Y-m-d", strtotime($dt_inicial)), PDO::PARAM_STR);
 			$p_query->bindValue ( 2, date("Y-m-d", strtotime($dt_final)), PDO::PARAM_STR);
