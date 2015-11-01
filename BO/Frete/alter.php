@@ -1,5 +1,5 @@
 <?php
-include_once '../Model/Banco.php';
+include_once __DIR__ .'../Model/Banco.php';
 
 if ($_SERVER['REQUEST_METHOD'] == "POST"){
 	if (Banco::atualizarParceiro($_POST)){
