@@ -1,6 +1,6 @@
 <?php
 
-require_once '../Conexao/Conexao.php';
+require_once '../../Conexao/Conexao.php';
 
 class UsuarioDAO {
 
