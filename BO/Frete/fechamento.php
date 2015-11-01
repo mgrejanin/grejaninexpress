@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__ .'../../Model/FretesDAO.php';
+include_once ("/home/mgrejanin1/public_html/grejaninexpress/Model/FreteDAO.php");
 if ($_SERVER['REQUEST_METHOD'] == "POST"){
 	if (isset($_POST['dt_inicial']) && isset($_POST['dt_final'])){
 		header("Location:../../result_fechamento.php?dt_inicial=$_POST[dt_inicial]&dt_final=$_POST[dt_final]");
