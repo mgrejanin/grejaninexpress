@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../Conexao/Conexao.php';
+require_once '../../Conexao/Conexao.php';
 
 class FretesDAO {
 	
