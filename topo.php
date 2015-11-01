@@ -1,14 +1,14 @@
 <?php
 
-ini_set('default_charset', 'ISO-8859-1');
+// ini_set('default_charset', 'ISO-8859-1');
 
-if(!isset($_SESSION)) { 
-	session_start();  
-} 
+// if(!isset($_SESSION)) { 
+// 	session_start();  
+// } 
 
-if ($_SESSION ['user'] == null) {
-	header ( "Location:index.php" );
-}
+// if ($_SESSION ['user'] == null) {
+// 	header ( "Location:index.php" );
+// }
 ?>
 <!-- Static navbar -->
 	<nav class="navbar navbar-default navbar-static-top">
