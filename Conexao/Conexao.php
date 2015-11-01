@@ -20,8 +20,6 @@ class Conexao{
 		try {
 			$conn = new PDO(self::$dsn, self::$user, self::$pass);
 			$conn -> setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-			echo "Conexao ok";
-			exit();
 			return $conn;
 		} catch (PDOException $e) {
 			echo "Connection failed: " . $e->getMessage();

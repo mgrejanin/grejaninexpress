@@ -11,6 +11,6 @@ if ($_SERVER ['REQUEST_METHOD'] == "POST") {
 		echo "noft"	;
 	}
 } else {
-	header ( "Location:../../index.php" );
+	echo "Não recebe post";
 }
 ?>
