@@ -57,7 +57,7 @@ class ColaboradorDAO {
 	
 	public static function buscarColaboradores(){
 		try {
-			$query = "SELECT * FROM TB_GE_COLABORADOR ORDER BY nm_colaborador DESC";
+			$query = "SELECT * FROM TB_GE_COLABORADOR ORDER BY nm_colaborador ASC";
 			$p_query = Conexao::getConn() ->prepare ( $query );
 			$p_query->execute ();
 			while ($res = $p_query->fetch ( PDO::FETCH_ASSOC )) { 
