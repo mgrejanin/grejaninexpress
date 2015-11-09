@@ -4,7 +4,11 @@ ini_set('default_charset', 'ISO-8859-1');
 
 // Verifica se há algum parametro no header GET-action
 if(!isset($_SESSION))
-{	session_start();
+{	
+	session_start();
+	if (isset($_SESSION['user'])) {
+		header("Location:inicio.php");
+	}
 }
 
 if (isset ( $_GET ['action'] )) {
@@ -53,7 +57,7 @@ if (isset ( $_GET ['action'] )) {
         
         <div class="checkbox">
         	<label>	
-	        	<input type="checkbox" value="1">
+	        	<input type="checkbox" value="1" name="session">
 	        	Mantenha-me conectado
         	</label>
         </div>
