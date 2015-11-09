@@ -28,9 +28,11 @@ if (isset ( $_GET ['action'] )) {
 		// Remove o nome do usuário do array session e destruição a sessão
 		$_SESSION ['user'] = null;
 		unset($_COOKIE['session']);
-		unset($_COOKIE['user']);		
+		unset($_COOKIE['user']);	
+		echo "<pre>";
+	print_r($_COOKIE);
+	exit();
 		session_destroy ();
-		
 	} 
 	
 	if ($_GET ['action'] == 'wrongLogin'){
