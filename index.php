@@ -14,16 +14,14 @@ if (isset ( $_GET ['action'] )) {
 		session_destroy ();
 	} 
 	
-	if ($_GET ['action'] == 'wrongLogin'): ?>
-		<!-- Usuário ou senha inválidos --> 
-		<script>
-			document.getElementById("wrongLogin").setAttribute("hidden", false);
-		</script>
-	<?php endif;
+	if ($_GET ['action'] == 'wrongLogin'){
+// 		Usuário ou senha inválidos 
+		echo "<script>alert('Usuário ou senha inválidos!');</script>";
+	}
 	
 	if ($_GET ['action'] == 'login') {
 		// Usuário ou senha inválidos
-	
+		echo "<script>alert('Você precisa fazer login para acessar essa página!');</script>";
 	}
 }
 ?>
@@ -65,10 +63,7 @@ if (isset ( $_GET ['action'] )) {
         <!-- ./Botão Enviar -->
         
     </form>
-    <!-- ./Formulário Bootstrap-->
-    
-    <div class="alert alert-warning" role="alert" hidden="true" id="wronglogin"><strong>Usuário ou senha inválidos</strong></div>
-    
+    <!-- ./Formulário Bootstrap-->    
 </div>
 </body>
 </html>
