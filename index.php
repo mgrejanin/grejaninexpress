@@ -2,13 +2,21 @@
 
 ini_set('default_charset', 'ISO-8859-1');
 
+// Verifica se já está logado
+if (isset($_SESSION['user'])) {
+	header("Location:inicio.php");
+}
+
+// Verifica se há sessão salva
+if ($_COOKIE['session'] == true){
+	$_SESSION['user'] = $_COOKIE['user'];
+	header("Location:inicio.php");
+}
+
 // Verifica se há algum parametro no header GET-action
 if(!isset($_SESSION))
 {	
-	session_start();
-	if (isset($_SESSION['user'])) {
-		header("Location:inicio.php");
-	}
+	session_start();	
 }
 
 if (isset ( $_GET ['action'] )) {
@@ -16,6 +24,7 @@ if (isset ( $_GET ['action'] )) {
 		// Remove o nome do usuário do array session e destruição a sessão
 		$_SESSION ['user'] = null;
 		session_destroy ();
+		$_COOKIE['session'] == false;
 	} 
 	
 	if ($_GET ['action'] == 'wrongLogin'){
