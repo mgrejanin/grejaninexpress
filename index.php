@@ -12,9 +12,16 @@ if (isset ( $_GET ['action'] )) {
 		// Remove o nome do usuário do array session e destruição a sessão
 		$_SESSION ['user'] = null;
 		session_destroy ();
-	} elseif ($_GET ['action'] == 'wrongLogin') {
+	} 
+	
+	if ($_GET ['action'] == 'wrongLogin') {
 		// Usuário ou senha inválidos
 
+	}
+	
+	if ($_GET ['action'] == 'login') {
+		// Usuário ou senha inválidos
+	
 	}
 }
 ?>
