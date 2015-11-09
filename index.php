@@ -1,8 +1,6 @@
 <?php 
 
 ini_set('default_charset', 'ISO-8859-1');
-echo "<pre>";
-print_r($_COOKIE);
 
 // Verifica se já está logado
 if (isset($_SESSION['user'])) {
