@@ -22,7 +22,7 @@ if ($_SERVER ['REQUEST_METHOD'] == "POST") {
 	
 // 	Chama método login
 	if (UsuarioDAO::ValidarLogin ( $_POST ['ds_email'], $_POST ['ds_senha'] )) {
-		if (isset($_POST)) {
+		if (isset($_POST['session']) && $_POST['session'] == 1) {
 			setcookie("session", true);
 			setcookie("user" , $_SESSION['user']);
 			print_r($_COOKIE);
