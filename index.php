@@ -48,7 +48,7 @@ if (isset ( $_GET ['action'] )) {
         
         <!-- Campo senha -->
             <label for="ds_senha" class="sr-only">Senha</label>
-            <input class="form-control" type="password" name="ds_senha" id="ds_senha" required="" placeholder="Digite sua senha">
+            <input class="form-control" type="password" name="ds_senha" id="ds_senha" placeholder="Digite sua senha">
         <!-- ./Campo senha -->
         
         <div class="checkbox">
