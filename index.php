@@ -8,8 +8,7 @@ if (isset($_SESSION['user'])) {
 }
 
 // Verifica se há sessão salva
-
-if (isset($_COOKIE['session']) && $_COOKIE['session'] == true){
+if (isset($_COOKIE['session']) && $_COOKIE['session'] == 1){
 	echo "<pre>";
 	print_r($_COOKIE);
 	exit();

@@ -30,7 +30,7 @@ if ($_SERVER ['REQUEST_METHOD'] == "POST") {
 		}
 		header ( "Location:../../inicio.php" );
 	} else {
-		header ( "Location:../../inicio.php?action=wrongLogin" );
+		header ( "Location:../../index.php?action=wrongLogin" );
 	}	
 } else {
 	header ( "Location:../../index.php?action=login" );
