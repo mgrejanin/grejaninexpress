@@ -9,15 +9,6 @@ if (isset($_SESSION['user'])) {
 	header("Location:inicio.php");
 }
 
-// Verifica se há sessão salva
-if (isset($_COOKIE['session']) && $_COOKIE['session'] == 1){
-	echo "<pre>";
-	print_r($_COOKIE);
-	exit();
-	$_SESSION['user'] = $_COOKIE['user'];
-	header("Location:inicio.php");
-}
-
 // Verifica se há algum parametro no header GET-action
 if(!isset($_SESSION))
 {	
@@ -28,11 +19,6 @@ if (isset ( $_GET ['action'] )) {
 	if ($_GET ['action'] == 'sair') {
 		// Remove o nome do usuário do array session e destruição a sessão
 		$_SESSION ['user'] = null;
-		unset($_COOKIE['session']);
-		unset($_COOKIE['user']);	
-		echo "<pre>";
-	print_r($_COOKIE);
-	exit();
 		session_destroy ();
 	} 
 	
@@ -72,13 +58,6 @@ if (isset ( $_GET ['action'] )) {
             <label for="ds_senha" class="sr-only">Senha</label>
             <input class="form-control" type="password" name="ds_senha" id="ds_senha" required="" placeholder="Digite sua senha">
         <!-- ./Campo senha -->
-        
-        <div class="checkbox">
-        	<label>	
-	        	<input type="checkbox" value="1" name="session">
-	        	Mantenha-me conectado
-        	</label>
-        </div>
         
         <!-- Botão Enviar -->
         <button type="submit" class="btn btn-lg btn-primary btn-block">Logar</button>
