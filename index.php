@@ -14,10 +14,12 @@ if (isset ( $_GET ['action'] )) {
 		session_destroy ();
 	} 
 	
-	if ($_GET ['action'] == 'wrongLogin') {
-		// Usuário ou senha inválidos
-
-	}
+	if ($_GET ['action'] == 'wrongLogin'): ?>
+		<!-- Usuário ou senha inválidos --> 
+		<script>
+			document.getElementById("wrongLogin").setAttribute("hidden", false);
+		</script>
+	<?php endif;
 	
 	if ($_GET ['action'] == 'login') {
 		// Usuário ou senha inválidos
@@ -64,6 +66,9 @@ if (isset ( $_GET ['action'] )) {
         
     </form>
     <!-- ./Formulário Bootstrap-->
+    
+    <div class="alert alert-warning" role="alert" hidden="true" id="wronglogin"><strong>Usuário ou senha inválidos</strong></div>
+    
 </div>
 </body>
 </html>
