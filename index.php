@@ -8,7 +8,10 @@ if (isset($_SESSION['user'])) {
 }
 
 // Verifica se há sessão salva
-if ($_COOKIE['session'] == true){
+echo "<pre>";
+print_r($_COOKIE);
+exit();
+if (isset($_COOKIE['session']) && $_COOKIE['session'] == true){
 	$_SESSION['user'] = $_COOKIE['user'];
 	header("Location:inicio.php");
 }

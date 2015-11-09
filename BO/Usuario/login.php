@@ -2,7 +2,12 @@
 /*
  * Arquivo para validação de login de usuário
  */
+
+echo "<pre>";
+print_r($_POST);
+
 include_once ("/home/mgrejanin1/public_html/grejaninexpress/Model/UsuarioDAO.php");
+// include_once '../../Model/UsuarioDAO.php';
 
 if ($_SERVER ['REQUEST_METHOD'] == "POST") {
 // 	Valida preenchimento de campo email
@@ -17,9 +22,11 @@ if ($_SERVER ['REQUEST_METHOD'] == "POST") {
 	
 // 	Chama método login
 	if (UsuarioDAO::ValidarLogin ( $_POST ['ds_email'], $_POST ['ds_senha'] )) {
-		if ($_POST['session'] == 1) {
+		if (isset($_POST)) {
 			setcookie("session", true);
 			setcookie("user" , $_SESSION['user']);
+			print_r($_COOKIE);
+			exit();
 		}
 		header ( "Location:../../inicio.php" );
 	} else {
