@@ -6,9 +6,9 @@ if(!isset($_SESSION)) {
 	session_start();  
 } 
 
-if ($_SESSION ['user'] == null) {
-	header ( "Location:index.php" );
-}
+// if ($_SESSION ['user'] == null) {
+// 	header ( "Location:index.php" );
+// }
 ?>
 <!-- Static navbar -->
 	<nav class="navbar navbar-default navbar-static-top">
@@ -40,17 +40,12 @@ if ($_SESSION ['user'] == null) {
 					<li><a href="form_fechamento.php">Fechamento</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a><?php echo $_SESSION['user'] ?></a></li>
+					<li><a><?php //echo $_SESSION['user'] ?></a></li>
 					<li class="active"><a href="index.php?action=sair">Sair <span
 							class="sr-only">(current)</span></a></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
 		</div>
-	</nav>
+	</nav>	
 	
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="bootstrap/js/bootstrap.min.js"></script>
