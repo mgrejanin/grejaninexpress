@@ -1,7 +1,6 @@
 <?php
 
-// require_once ("/home/mgrejanin1/public_html/grejaninexpress/Conexao/Conexao.php");
-require_once __DIR__.'/../Conexao/conexao.php';
+require_once ("/home/mgrejanin1/public_html/grejaninexpress/Conexao/Conexao.php");
 
 class UsuarioDAO {
 
