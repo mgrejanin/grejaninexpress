@@ -3,11 +3,7 @@
  * Arquivo para validação de login de usuário
  */
 
-echo "<pre>";
-print_r($_POST);
-
 include_once ("/home/mgrejanin1/public_html/grejaninexpress/Model/UsuarioDAO.php");
-// include_once '../../Model/UsuarioDAO.php';
 
 if ($_SERVER ['REQUEST_METHOD'] == "POST") {
 // 	Valida preenchimento de campo email

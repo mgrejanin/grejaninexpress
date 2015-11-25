@@ -1,81 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" >
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Cadastro de Colaborador | Grejanin Express</title>
-	<link rel="stylesheet" href="formoid_files/formoid1/formoid-solid-dark.css" type="text/css" />	
-	<script type="text/javascript" src="formoid_files/formoid1/jquery.min.js"></script>
-	
-	<!-- Bootstrap core CSS -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
-	 <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cadastro de Colaborador | Grejanin Express</title>
 </head>
-<body class="blurBg-false" style="background-color: #EBEBEB">
+<body>
 
 <?php include_once 'topo.php';?>
 
-	<!-- Start Formoid form-->	
-	<script type="text/javascript"
-		src="cadastrarfuncionario_files/formoid1/jquery.min.js"></script>
-	<form class="formoid-solid-dark"
-		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
-		action="BO/Colaborador/insert.php" method="post">
-		<div class="title">
-			<h2>Cadastro de Colaborador</h2>
-		</div>
+	<div class="container">
+		<h3>Cadastro de Colaborador</h3>
+		<hr>
 		
-		 <!-- Nome colaborador -->
-		<div class="element-input">
-			<label class="title"><span class="required">*</span></label>
-			<div class="item-cont">
-				<input class="large" type="text" name="nm_colaborador" required="required"
-					placeholder="Nome do Colaborador" /><span class="icon-place"></span>
+		<form action="BO/Colaborador/insert.php" method="post">
+			<!-- Campo nome -->
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+						<label for="nm_colaborador">Nome:</label>
+						<input type="text" class="form-control" name="nm_colaborador" id="nm_colaborador" placeholder="Nome do Colaborador" required="required">
+					</div>
+				</div>
 			</div>
-		</div>
-		<!-- Nome colaborador -->
-		
-		<!-- Email colaborador -->
-		<div class="element-input">
-			<label class="title"><span class="required">*</span></label>
-			<div class="item-cont">
-				<input class="large" type="text" name="ds_email" required="required"
-					placeholder="E-mail" /><span class="icon-place"></span>
+			<!-- ./Campo nome -->
+	
+			<!-- Campo email -->
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+						<label for="ds_email">Email:</label>
+						<input type="email" class="form-control" name="ds_email" id="ds_email" placeholder="Email do Colaborador">
+					</div>
+				</div>
 			</div>
-		</div>
-		<!-- Email colaborador -->
-		
-		<!-- Descrrção do carro -->
-		<div class="element-input">
-			<label class="title"></label>
-			<div class="item-cont">
-				<input class="large" type="text" name="ds_carro" placeholder="Carro" /><span
-					class="icon-place"></span>
+			<!-- ./Campo email -->
+			
+			<!-- Campo carro -->
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+						<label for="ds_carro">Carro:</label>
+						<input type="text" class="form-control" name="ds_carro" id="ds_carro" placeholder="Carro do Colaborador">
+					</div>
+				</div>
 			</div>
-		</div>
-		<!-- Descrição do carro -->
-		
-		<!-- Tamanho do carro -->
-		<div class="element-input">
-			<label class="title"></label>
-			<div class="item-cont">
-				<input class="large" type="text" name="ds_tamanho_carro"
-					placeholder="Tamanho do carro" /><span class="icon-place"></span>
+			<!-- ./Campo carro -->
+			
+			<!-- Campo Tamanho do carro -->
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+						<div class="form-group">
+							<label for="ds_tamanho_carro">Tamanho do caro:</label>
+							<input type="text" class="form-control" name="ds_tamanho_carro" id="ds_tamanho_carro" placeholder="Tamanho do Carro">
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-		<!-- Tamanho do carro -->
+			<!-- ./Campo Tamanho do carro -->
+			
+			<button type="submit" class="btn btn-success">Cadastrar</button>
+		</form>
 		
-		<!-- Botão Enviar -->
-		<div class="submit">
-			<input type="submit" value="Cadastrar" />
-		</div>
-		<!-- Botão Enviar -->
-		
-	</form>
+		<?php 
+			if (isset($_GET['action'])):?>
+			
+			<br>
+			<div class="row">
+				<div class="col-md-4">
+				
+					<?php if ($_GET['action'] == "error"){ ?>
+						<div class="alert alert-danger alert-dismissible" role="alert">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<strong>Erro ao cadastrar colaborador!</strong>
+						</div>
+					<?php } elseif ($_GET['action'] == "success"){ ?>
+						<div class="alert alert-success alert-dismissible" role="alert">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<strong>Colaborador cadastrado com sucesso!</strong>
+						</div>
+					<?php } ?>
+				</div>
+			</div>			
+		<?php endif;?>
+
+		<!-- Footer -->
+		<?php include_once 'rodape.php';?>
+		<!-- /Footer -->
+
+	</div>
 
 </body>
 </html>
