@@ -16,8 +16,8 @@
 		
 			<!-- Campo nome -->
 			<div class="row">
-				<div class="form-group">
-					<div class="col-md-4">
+				<div class="col-md-4">
+					<div class="form-group">
 						<label for="nm_destino">Nome:</label> 
 						<input type="text" name="nm_destino" class="form-control" id="nm_destino" placeholder="Nome do Destino" required="required" >
 					</div>
@@ -25,12 +25,10 @@
 			</div>
 			<!-- ./Campo nome -->
 			
-			<br>
-			
 			<!-- Campo Sigla -->
 			<div class="row">
-				<div class="form-group">
-					<div class="col-md-2">
+				<div class="col-md-2">
+					<div class="form-group">
 						<label for="ds_sigla">Sigla:</label> 
 						<input type="text" class="form-control" name="ds_sigla" id="ds_sigla" placeholder="Sigla do Destino" required="required">
 					</div>
@@ -38,20 +36,16 @@
 			</div>
 			<!-- ./Campo Sigla -->
 			
-			<br>
-			
 			<!-- Campo Observação -->
 			<div class="row">
-				<div class="form-group">
-					<div class="col-md-4">
+				<div class="col-md-4">
+					<div class="form-group">
 						<label for="ds_obs">Observação:</label>
 						<textarea class="form-control" rows="3" cols="10" placeholder="Observações sobre o Destino"></textarea>
 					</div>
 				</div>
 			</div>
 			<!-- ./Campo Observação -->
-			
-			<br>
 			
 			<!-- Botão enviar -->
 			<button type="submit" class="btn btn-success">Cadastrar</button>
