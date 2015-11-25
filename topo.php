@@ -44,8 +44,7 @@ if ($_SESSION ['user'] == null) {
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a><?php //echo $_SESSION['user'] ?></a></li>
-					<li class="active"><a href="index.php?action=sair">Sair <span
-							class="sr-only">(current)</span></a></li>
+					<li><a href="index.php?action=sair"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
