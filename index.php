@@ -11,25 +11,8 @@ if (isset($_SESSION['user'])) {
 if(!isset($_SESSION))
 {	
 	session_start();	
-}
+} 
 
-if (isset ( $_GET ['action'] )) {
-	if ($_GET ['action'] == 'sair') {
-		// Remove o nome do usuário do array session e destruição a sessão
-		$_SESSION ['user'] = null;
-		session_destroy ();
-	} 
-	
-	if ($_GET ['action'] == 'wrongLogin'){
-// 		Usuário ou senha inválidos 
-		echo "<script>alert('Usuário ou senha inválidos!');</script>";
-	}
-	
-	if ($_GET ['action'] == 'login') {
-		// Usuário ou senha inválidos
-		echo "<script>alert('Você precisa fazer login para acessar essa página!');</script>";
-	}
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -61,8 +44,39 @@ if (isset ( $_GET ['action'] )) {
         <button type="submit" class="btn btn-lg btn-primary btn-block">Logar</button>
         <!-- ./Botão Enviar -->
         
+         <?php 
+			if (isset($_GET['action'])):?>
+			
+			<br>
+			<div class="row">
+				<div class="col-md-12">
+				
+			<?php if ($_GET['action'] == "wrongLogin"){ ?>
+					<div class="alert alert-danger alert-dismissible" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<strong>Usuário ou senha inválidos!</strong>
+					</div>
+			<?php } elseif ($_GET['action'] == "login"){ ?>
+					<div class="alert alert-warning alert-dismissible" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<strong>Você precisa estar logado para acessar esta página!</strong>
+					</div>
+			<?php } 
+				
+					if ($_GET ['action'] == 'sair') {
+						// Remove o nome do usuário do array session e destruição a sessão
+						$_SESSION ['user'] = null;
+						session_destroy ();
+					}
+			?>
+				</div>
+			</div>			
+			<?php endif;?>
+        
     </form>
     <!-- ./Formulário Bootstrap-->    
+    
+   
 </div>
 </body>
 </html>
