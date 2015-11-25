@@ -60,18 +60,25 @@
 		</form>		
 		
 		<?php 
-			if (isset($_GET['action']) && $_GET['action'] == "error" ) : ?>
+			if (isset($_GET['action'])):?>
 			
 			<br>
 			<div class="row">
 				<div class="col-md-4">
-					<div class="alert alert-danger alert-dismissible" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<strong>Erro ao cadastrar destino!</strong>
-					</div>
+				
+					<?php if ($_GET['action'] == "error"){ ?>
+						<div class="alert alert-danger alert-dismissible" role="alert">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<strong>Erro ao cadastrar destino!</strong>
+						</div>
+					<?php } elseif ($_GET['action'] == "success"){ ?>
+						<div class="alert alert-success alert-dismissible" role="alert">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<strong>Destino cadastrado com sucesso!</strong>
+						</div>
+					<?php } ?>
 				</div>
-			</div>
-			
+			</div>			
 		<?php endif;?>
 		
 	</div>
