@@ -7,8 +7,6 @@
 
 <!-- Bootstrap core CSS -->
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<script type="text/javascript" src="bootstrap/js/jquery-2.1.4.min.js"></script>
-
 
 </head>
 <body>
