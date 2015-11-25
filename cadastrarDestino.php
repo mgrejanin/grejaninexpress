@@ -11,31 +11,59 @@
 
 
 </head>
-<body style="background-color: #EBEBEB">
+<body>
 
 <?php include_once 'topo.php';?>
 	
-	<div class="container" style="margin-left: 50%">
-		<form action="">
+	<div class="container">
+		<h3>Cadastro de Destino</h3>
+		<hr>
+		<form action="BO/Destino/insert.php" method="post">
+		
+			<!-- Campo nome -->
 			<div class="row">
-				<div class="col-md-2">
-					<div class="form-group">
-					
-						<div class='input-group date' id='datetimepicker1'>
-							<input type='date' class="form-control" /> <span
-								class="input-group-addon"> <span
-								class="glyphicon glyphicon-calendar"></span>
-							</span>
-						</div>
+				<div class="form-group">
+					<div class="col-md-4">
+						<label for="nm_destino">Nome:</label> 
+						<input type="text" name="nm_destino" class="form-control" id="nm_destino" placeholder="Nome do Destino" required="required" >
 					</div>
 				</div>
-				<script type="text/javascript">
-		            $(function () {
-		                $('#datetimepicker1').datetimepicker();
-		            });
-		        </script>
 			</div>
-		</form>
+			<!-- ./Campo nome -->
+			
+			<br>
+			
+			<!-- Campo Sigla -->
+			<div class="row">
+				<div class="form-group">
+					<div class="col-md-2">
+						<label for="ds_sigla">Sigla:</label> 
+						<input type="text" class="form-control" name="ds_sigla" id="ds_sigla" placeholder="Sigla do Destino" required="required">
+					</div>
+				</div>
+			</div>
+			<!-- ./Campo Sigla -->
+			
+			<br>
+			
+			<!-- Campo Observação -->
+			<div class="row">
+				<div class="form-group">
+					<div class="col-md-4">
+						<label for="ds_obs">Observação:</label>
+						<textarea class="form-control" rows="3" cols="10" placeholder="Observações sobre o Destino"></textarea>
+					</div>
+				</div>
+			</div>
+			<!-- ./Campo Observação -->
+			
+			<br>
+			
+			<!-- Botão enviar -->
+			<button type="submit" class="btn btn-success">Cadastrar</button>
+			<!-- ./Botão enviar -->
+			
+		</form>		
 	</div>
 
 	<!-- Footer -->
