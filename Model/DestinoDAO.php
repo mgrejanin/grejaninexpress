@@ -1,6 +1,7 @@
 <?php
 
-require_once ("/home/mgrejanin1/public_html/grejaninexpress/Conexao/Conexao.php");
+// require_once ("/home/mgrejanin1/public_html/grejaninexpress/Conexao/Conexao.php");
+require_once __DIR__.'/../Conexao/conexao.php';
 
 class DestinoDAO {
 	
@@ -15,11 +16,12 @@ class DestinoDAO {
 						
 			$p_query = Conexao::getConn ()->prepare ( $query );
 			$p_query->bindValue ( 1, $dadosDestino['nm_destino']);
-			$p_query->bindValue ( 2, $dadosDestino['ds_sigla'] );
+			$p_query->bindValue ( 2, strtoupper($dadosDestino['ds_sigla']));
 			$p_query->bindValue ( 3, isset($dadosOrigem['ds_obs']) ? $dadosOrigem['ds_obs'] : '');
 			return $p_query->execute ();
 		} catch ( Exception $e ) {
 			print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde." . $e->getMessage();
+			header("Location:../../cadastrarDestino.php?action=error");
 		}
 	}
 	

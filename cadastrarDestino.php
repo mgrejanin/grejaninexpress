@@ -4,10 +4,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cadastro de Destino | Grejanin Express</title>
-
-<!-- Bootstrap core CSS -->
-<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
 </head>
 <body>
 
@@ -62,6 +58,22 @@
 			<!-- ./Botão enviar -->
 			
 		</form>		
+		
+		<?php 
+			if (isset($_GET['action']) && $_GET['action'] == "error" ) : ?>
+			
+			<br>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="alert alert-danger alert-dismissible" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<strong>Erro ao cadastrar destino!</strong>
+					</div>
+				</div>
+			</div>
+			
+		<?php endif;?>
+		
 	</div>
 
 	<!-- Footer -->
