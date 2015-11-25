@@ -5,7 +5,7 @@ if(!isset($_SESSION)) {
 } 
 
 if ($_SESSION ['user'] == null) {
-	header ( "Location:index.php" );
+	header ( "Location:index.php?action=login" );
 }
 ?>
 
