@@ -13,6 +13,9 @@ if ($_SESSION ['user'] == null) {
 <!-- Bootstrap core CSS -->
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+<!-- Favicon -->
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
 <!-- Static navbar -->
 	<nav class="navbar navbar-default navbar-static-top">
 		<div class="container">
