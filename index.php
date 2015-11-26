@@ -23,16 +23,19 @@ if(!isset($_SESSION))
         <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css" >
         <link rel="stylesheet" href="bootstrap/css/signin.css" >
 </head>
-<body>
+<body style="background-color: #FFFFFF">
 <div class="container">
     <!-- Formulário Bootstrap-->
     <form class="form-signin" method="post" action="BO/Usuario/login.php">
-    
-    	<h2 class="form-signin-heading">Login</h2>
+ 
+    	<img class="form-signin-heading" alt="logo" src="images/logo.jpg" style="width: 300px">
+    	<h4 class="form-signin-heading">Faça login para acessar o sistema</h4>
     	
         <!-- Campo Email -->
+        <div class="input-group-lg">
             <label for="ds_email" class="sr-only">Email</label>
-            <input class="form-control" type="email" name="ds_email" id="ds_email" required="" autofocus="" placeholder="Digite seu e-mail">
+            <input class="form-control" type="email" name="ds_email" id="ds_email" required="required" autofocus="autofocus" placeholder="Digite seu e-mail">
+         </div>
         <!-- ./Campo Email -->
         
         <!-- Campo senha -->
@@ -76,7 +79,9 @@ if(!isset($_SESSION))
     </form>
     <!-- ./Formulário Bootstrap-->    
     
-   
+   	<!-- Footer -->
+	<?php include_once 'rodape.php';?>
+	<!-- /Footer -->
 </div>
 </body>
 </html>
