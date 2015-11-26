@@ -1,3 +1,9 @@
+<?php include_once 'Model/ColaboradorDAO.php';
+						$colaboradores = ColaboradorDAO::buscarColaboradores ();
+						echo "<pre>";
+						print_r($colaboradores);
+						exit();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,10 +36,12 @@
 			<div class="col-md-3">
 				<div class="form-group">
 					<label for="cod_colaborador">Colaborador:</label>
-					<select class="form-control">
+					<select class="form-control" name="cod_colaborador">
 					<?php
 						include_once 'Model/ColaboradorDAO.php';
 						$colaboradores = ColaboradorDAO::buscarColaboradores ();
+						print_r($colaboradores);
+						exit();
 						foreach ( $colaboradores as $colaborador ) : ?>
 							<option value="<?php echo $colaborador['cod_colaborador'] ?>"><?php echo $colaborador['nm_colaborador'] ?></option>
 						<?php endforeach; ?>
