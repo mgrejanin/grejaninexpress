@@ -22,6 +22,7 @@ if(!isset($_SESSION))
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" >
         <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css" >
         <link rel="stylesheet" href="bootstrap/css/signin.css" >
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body style="background-color: #FFFFFF">
 <div class="container">
