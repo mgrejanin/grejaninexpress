@@ -28,7 +28,7 @@ if(!isset($_SESSION))
     <!-- Formulário Bootstrap-->
     <form class="form-signin" method="post" action="BO/Usuario/login.php">
  
-    	<img class="form-signin-heading" alt="logo" src="/home/mgrejanin1/public_html/grejaninexpress/images/logo.jpg" style="width: 300px">
+    	<img class="form-signin-heading" alt="logo" src="images/logo.jpg" style="width: 300px">
     	<h4 class="form-signin-heading">Faça login para acessar o sistema</h4>
     	
         <!-- Campo Email -->
