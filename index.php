@@ -1,7 +1,5 @@
 <?php 
 
-ini_set('default_charset', 'ISO-8859-1');
-
 // Verifica se já está logado
 if (isset($_SESSION['user'])) {
 	header("Location:inicio.php");
@@ -22,7 +20,7 @@ if(!isset($_SESSION))
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" >
         <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css" >
         <link rel="stylesheet" href="bootstrap/css/signin.css" >
-        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href="favicon.jpg" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body style="background-color: #FFFFFF">
 <div class="container">
