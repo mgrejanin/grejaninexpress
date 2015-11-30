@@ -1,6 +1,9 @@
 <?php
 include_once 'Model/FretesDAO.php';
 if (isset($_GET['dt_inicial']) && isset($_GET['dt_final'])){
+// 	echo date("Y-m-d", strtotime($_GET['dt_inicial']));
+// 	echo date("Y-m-d", strtotime($_GET['dt_final']));
+// 	exit();
 	$reg = FretesDAO::buscarFretes($_GET['dt_inicial'], $_GET['dt_final']);
 } else {
 	echo "Por favor, informe as datas";

@@ -46,7 +46,7 @@ if ($_SESSION ['user'] == null) {
 					<li><a href="form_fechamento.php">Fechamento</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a><?php //echo $_SESSION['user'] ?></a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['user'] ?></a></li>
 					<li><a href="index.php?action=sair"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
 				</ul>
 			</div>
