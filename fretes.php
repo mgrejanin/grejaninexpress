@@ -66,13 +66,14 @@ $reg = FretesDAO::listarFretes();
 		Label the data
 		*/
 		td:nth-of-type(1):before { content: "#"; }
-		td:nth-of-type(2):before { content: "Funcionário"; }
-		td:nth-of-type(3):before { content: "WB"; }
-		td:nth-of-type(4):before { content: "Origem"; }
-		td:nth-of-type(5):before { content: "Destino"; }
-		td:nth-of-type(6):before { content: "Valor Recebido"; }
-		td:nth-of-type(7):before { content: "Valor Pago"; }
-		td:nth-of-type(8):before { content: "Oberservação"; }
+		td:nth-of-type(2):before { content: "Data"; }
+		td:nth-of-type(3):before { content: "Funcionário"; }
+		td:nth-of-type(4):before { content: "WB"; }
+		td:nth-of-type(5):before { content: "Origem"; }
+		td:nth-of-type(6):before { content: "Destino"; }
+		td:nth-of-type(7):before { content: "Valor Recebido"; }
+		td:nth-of-type(8):before { content: "Valor Pago"; }
+		td:nth-of-type(9):before { content: "Oberservação"; }
 	}
 	
 	/* Smartphones (portrait and landscape) ----------- */
@@ -142,7 +143,7 @@ $reg = FretesDAO::listarFretes();
 					<td><?php echo $dados['nm_destino']?></td>
 					<td><?php echo "R$". number_format($dados['vlr_recebido'], 2, ',', '.');?></td>
 					<td><?php echo "R$". number_format($dados['vlr_pago'], 2, ',', '.');?></td>
-					<td><?php echo isset($dados['ds_obs']) ? $dados['ds_obs'] :  ""?></td>
+					<td><?php echo isset($dados['ds_obs']) ? $dados['ds_obs'] :  " "?></td>
 					<td><a href="#"><span class="glyphicon glyphicon-pencil"></span></a></td>
 					<td><a href="BO/Frete/delete.php?cod_frete=<?php echo $dados['cod_frete']?>" onclick="return confirm('Deseja exluir o frete dos registros?')"><span class="glyphicon glyphicon-trash"></span></a></td>
 				</tr>
