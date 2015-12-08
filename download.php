@@ -56,10 +56,10 @@ echo $table;
 /*
  * ARQUIVO CONTEM OS COMANDOS PARA O DOWNLOAD DO RELATORIO
  */
-// $arquivo = 'Fechamento.xls';
-// // Força o Download do Arquivo Gerado
-// header ( 'Cache-Control: no-cache, must-revalidate' );
-// header ( 'Pragma: no-cache' );
-// header ( 'Content-Type: application/x-msexcel' );
-// header ( "Content-Disposition: attachment; filename=\"{$arquivo}\"" );
+$arquivo = 'Fechamento.xls';
+// Força o Download do Arquivo Gerado
+header ( 'Cache-Control: no-cache, must-revalidate' );
+header ( 'Pragma: no-cache' );
+header ( 'Content-Type: application/x-msexcel' );
+header ( "Content-Disposition: attachment; filename=\"{$arquivo}\"" );
 ?>
