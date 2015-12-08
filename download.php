@@ -40,7 +40,7 @@
 // 		$table.="<td>". isset($dados['ds_obs']) ? $dados['ds_obs'] :  "" . "</td></tr>";
 		$valorTotal += $dados['vlr_recebido'];
 	}
-	$table.="<tr><td align='center' colspan='2'>Valor Total:</td><td> R$".number_format($valorTotal, 2, ',', '.')."</td></tr>";
+	$table.="<tr><td align='center' colspan='2'>Valor Total:</td><td align='center'> R$".number_format($valorTotal, 2, ',', '.')."</td></tr>";
 	$cont ++;
 	$table .= "</tr>";
 	$table.="</table>";
