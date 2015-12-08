@@ -1,9 +1,6 @@
 <?php
 include_once 'Model/FretesDAO.php';
 if (isset($_GET['dt_inicial']) && isset($_GET['dt_final'])){
-// 	echo date("Y-m-d", strtotime($_GET['dt_inicial']));
-// 	echo date("Y-m-d", strtotime($_GET['dt_final']));
-// 	exit();
 	$reg = FretesDAO::buscarFretes($_GET['dt_inicial'], $_GET['dt_final']);
 } else {
 	echo "Por favor, informe as datas";
@@ -15,12 +12,7 @@ if (isset($_GET['dt_inicial']) && isset($_GET['dt_final'])){
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fretes | Grejanin Express</title>
-<link href="bootstrap/css/fretes.css" rel="stylesheet" type="text/css" />
-
-<!-- Bootstrap core CSS -->
-<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-
-	
+<link href="bootstrap/css/fretes.css" rel="stylesheet" type="text/css" />	
 	
 	<!-- Tabela Responsiva -->
 	<!--[if !IE]><!-->
@@ -153,6 +145,13 @@ if (isset($_GET['dt_inicial']) && isset($_GET['dt_final'])){
 			<!-- Table Body -->
 		</table>
 		<!-- Tabela -->
+		
+		<div class="row">
+			<div class="col-md-5">
+				<?php $_SESSION['resultado'] = $reg; ?>
+				<a class="btn btn-success" href="download.php?dt_inicial=<?php echo $_GET['dt_inicial']?>&dt_final=<?php echo $_GET['dt_final']?>">Download</a>
+			</div>
+		</div>
 	</div>
 	<!-- Container -->
 	
